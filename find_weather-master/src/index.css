@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montseratt', sans-serif;
+}
+
+.app {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); 
+  transition: 0.4s ease;
+}
+.app.medium{
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.app.warm {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  transition: 0.4 ease;
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 15px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 5%;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+  border-radius: 16px;
+  margin-top: 5px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  
+  color: #313131;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.location-box .location {
+  color: #FFF;
+  font-size: 200%;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: #FFF;
+  font-size: 150%;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-icon{
+  position: relative;
+  display: inline-block;   
+  border-radius: 16px;  
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 400%;
+  font-weight: 700;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather {
+  color: #FFF;
+  font-size: 250%;
+  text-align: center;
+  font-weight: 550;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.humidity, .wind {
+  padding: 10px 0px;
+  color: #FFF;
+  font-size: 170%;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
