@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [darkMode, setdarkMode] = useState("light");
@@ -12,7 +14,7 @@ function App() {
   const showAlert = (message, type) => {
     setalert({
       msg: message,
-      type: type,
+      type: type
     });
     setTimeout(() => {
       setalert(null);
@@ -32,17 +34,25 @@ function App() {
   };
   return (
     <>
-      <Navbar title="TextUtils" mode={darkMode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container">
-        <TextForm
-          showAlert={showAlert}
-          heading="Enter your text to analyze"
-          mode={darkMode}
-        />
-
-        {/* <About /> */}
-      </div>
+      <Router>
+        <Navbar title="TextUtils" mode={darkMode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container">
+          <Routes>
+            <Route path="/about" element={<About mode={darkMode} />} />
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter your text to analyze"
+                  mode={darkMode}
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
