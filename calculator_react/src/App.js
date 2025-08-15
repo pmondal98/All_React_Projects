@@ -110,7 +110,7 @@ function App() {
               type="button"
               value="="
               className="equal"
-              onClick={(e) => setValue(eval(value))}
+              onClick={(e) => setValue(eval(value) + "")}
             />
           </div>
         </form>
